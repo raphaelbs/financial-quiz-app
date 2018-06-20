@@ -6,7 +6,7 @@
 ## Demo
 
 Api publicada no `AWS S3`:
-https://s3.amazonaws.com/financial-quiz-app/
+http://financial-quiz-app.s3-website-us-east-1.amazonaws.com/
 
 ## Wiki
 
