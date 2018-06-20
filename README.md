@@ -1,6 +1,22 @@
+# Financial Quiz App
+
+[![Build Status Travis](https://travis-ci.org/raphaelbs/financial-quiz-app.svg?branch=develop)](https://travis-ci.org/raphaelbs/financial-quiz-app)
+[![Dependency Status](https://david-dm.org/raphaelbs/financial-quiz-app.svg)](https://david-dm.org/raphaelbs/financial-quiz-app)
+
+## Demo
+
+Api publicada no `AWS S3`:
+https://s3.amazonaws.com/financial-quiz-app/
+
+## Wiki
+
+[Acesse a wiki para mais detalhes](https://github.com/raphaelbs/financial-quiz-api/wiki)
+
+---
+
 # FinancialQuizApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+[Angular CLI](https://github.com/angular/angular-cli) versão 6.0.8.
 
 ## Development server
 
