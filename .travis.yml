@@ -2,9 +2,10 @@ language: node_js
 sudo: false
 node_js:
   - "10"
+sudo: required
 dist: trusty
 addons:
-  chrome: stable
-before_install:
-  - # start your web application and listen on `localhost`
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9876 http://localhost &
+    chrome: stable
+before_script:
+    - "sudo chown root /opt/google/chrome/chrome-sandbox"
+    - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
