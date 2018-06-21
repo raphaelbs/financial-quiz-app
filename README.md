@@ -2,6 +2,8 @@
 
 [![Build Status Travis](https://travis-ci.org/raphaelbs/financial-quiz-app.svg?branch=develop)](https://travis-ci.org/raphaelbs/financial-quiz-app)
 [![Dependency Status](https://david-dm.org/raphaelbs/financial-quiz-app.svg)](https://david-dm.org/raphaelbs/financial-quiz-app)
+[![Build Status VSTS](https://ralpha.visualstudio.com/_apis/public/build/definitions/b28b3fab-4f3f-4cc8-aad4-fea8ca07092e/1/badge)](https://ralpha.visualstudio.com)
+[![Deployment Status VSTS](https://ralpha.vsrm.visualstudio.com/_apis/public/Release/badge/b28b3fab-4f3f-4cc8-aad4-fea8ca07092e/1/1)](https://ralpha.visualstudio.com)
 
 ## Demo
 
