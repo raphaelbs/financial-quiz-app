@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://financial-quiz.herokuapp.com/'
+  api: 'https://financial-quiz.herokuapp.com'
 };
