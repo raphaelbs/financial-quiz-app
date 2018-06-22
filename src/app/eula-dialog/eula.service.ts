@@ -5,15 +5,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IEula } from './eula.interface';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class EulaService {
+  public readonly termoId: string = '5b2c3c0182d97c174cc37667';
   constructor(private http: HttpClient) {}
 
   findEula() {
     return this.http.get(
-      `${environment.api}/eula/id/5b287432aa53f735bc73806d`
+      `${environment.api}/eula/id/${this.termoId}`
     ) as Observable<IEula>;
   }
 }

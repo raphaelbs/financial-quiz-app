@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, Optional } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { IEula } from './eula.interface';
 
 @Component({
   selector: 'app-eula-dialog',
@@ -7,11 +8,13 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
   styleUrls: ['./eula-dialog.component.scss']
 })
 export class EulaDialogComponent implements OnInit {
+  eulaAccepted: boolean;
+
   constructor(
     public dialogRef: MatDialogRef<EulaDialogComponent>,
     @Optional()
     @Inject(MAT_DIALOG_DATA)
-    public data: any
+    public data: IEula
   ) {}
 
   ngOnInit() {}
