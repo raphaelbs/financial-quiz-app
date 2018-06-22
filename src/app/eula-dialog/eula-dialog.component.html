@@ -1,9 +1,14 @@
-<h2 mat-dialog-title>{{ data.label }}</h2>
-<mat-dialog-content [innerHTML]="data.eula"></mat-dialog-content>
+<div mat-dialog-title fxLayoutAlign="space-between center">
+  <h2>{{ eula.label }}</h2>
+  <button mat-icon-button [mat-dialog-close]="false">
+    <i class="mdi mdi-close"></i>
+  </button>
+</div>
+<mat-dialog-content [innerHTML]="eula.eula"></mat-dialog-content>
 <hr>
-<div>
+<div fxLayout="column" fxLayoutAlign="center center">
   <p>
     <mat-checkbox [(ngModel)]="eulaAccepted">Li e aceito os termos e condições acima</mat-checkbox>
   </p>
-  <button mat-raised-button [mat-dialog-close]="true">OK, ENTENDI</button>
+  <button mat-button color="accent" [mat-dialog-close]="true" [disabled]="!eulaAccepted">OK, ENTENDI</button>
 </div>

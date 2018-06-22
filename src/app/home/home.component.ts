@@ -17,11 +17,13 @@ export class HomeComponent implements OnInit {
     this.eula = this.route.snapshot.data['eula'];
   }
 
-  openDialog(): void {
+  openDialog(answerProfile: boolean): void {
     const dialogRef = this.dialog.open(EulaDialogComponent, {
-      data: this.eula
+      data: { eula: this.eula, answerProfile }
     });
 
-    dialogRef.afterClosed().subscribe(result => {});
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    });
   }
 }

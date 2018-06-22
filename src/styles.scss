@@ -17,3 +17,9 @@ $candy-app-theme: mat-light-theme(
 );
 
 @include angular-material-theme($candy-app-theme);
+
+html,
+body {
+  min-height: 100%;
+  background-color: #f6f6f6;
+}

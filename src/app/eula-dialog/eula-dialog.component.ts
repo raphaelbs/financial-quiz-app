@@ -9,15 +9,20 @@ import { IEula } from './eula.interface';
 })
 export class EulaDialogComponent implements OnInit {
   eulaAccepted: boolean;
+  answerProfile: boolean;
+  eula: IEula;
 
   constructor(
     public dialogRef: MatDialogRef<EulaDialogComponent>,
     @Optional()
     @Inject(MAT_DIALOG_DATA)
-    public data: IEula
+    private data: any
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.answerProfile = this.data && this.data.answerProfile;
+    this.eula = this.data && this.data.eula;
+  }
 
   onNoClick(): void {
     this.dialogRef.close();

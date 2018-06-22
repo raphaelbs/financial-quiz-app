@@ -18,14 +18,16 @@ import {
   MatButtonModule,
   MatDialogModule,
   MAT_DIALOG_DEFAULT_OPTIONS,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatCardModule
 } from '@angular/material';
 
 const MaterialDesignModules = [
   MatGridListModule,
   MatButtonModule,
   MatDialogModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatCardModule
 ];
 
 @NgModule({
