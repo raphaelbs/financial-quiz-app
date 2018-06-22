@@ -7,7 +7,7 @@
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test --browsers ChromeHeadless --code-coverage=true --watch=false",
-    "test:dev": "ng test --browsers ChromeHeadless --code-coverage=true",
+    "test:dev": "ng test --browsers ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
