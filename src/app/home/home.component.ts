@@ -11,19 +11,25 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   eula: IEula;
-  constructor(public dialog: MatDialog, private route: ActivatedRoute) {}
+  constructor(
+    public dialog: MatDialog,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.eula = this.route.snapshot.data['eula'];
   }
 
-  openDialog(answerProfile: boolean): void {
+  openAcceptEulaDialog(answerProfile: boolean = false): void {
     const dialogRef = this.dialog.open(EulaDialogComponent, {
       data: { eula: this.eula, answerProfile }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
+    dialogRef.afterClosed().subscribe((eulaAccepted: boolean) => {
+      if (eulaAccepted) {
+        this.router.navigate(['/perfil']);
+      }
     });
   }
 }
