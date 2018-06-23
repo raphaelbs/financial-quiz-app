@@ -6,8 +6,7 @@ import { EulaResolver } from './eula.resolver';
 @Component({
   selector: 'app-eula-dialog',
   templateUrl: './eula-dialog.component.html',
-  styleUrls: ['./eula-dialog.component.scss'],
-  providers: [EulaResolver]
+  styleUrls: ['./eula-dialog.component.scss']
 })
 export class EulaDialogComponent implements OnInit {
   eulaAccepted: boolean;

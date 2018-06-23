@@ -9,9 +9,7 @@ import { IFormInput } from '../base/form-input/form-input.interface';
 export class InvestmentProfileComponent implements OnInit {
   form: IFormInput;
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor() {
     this.form = {
       type: 'form',
       label: 'PERFIL DO INVESTIDOR - QUESTIONÁRIO',
@@ -210,4 +208,8 @@ export class InvestmentProfileComponent implements OnInit {
       ]
     };
   }
+
+  ngOnInit() {}
+
+  formSubmit() {}
 }

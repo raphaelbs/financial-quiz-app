@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InvestmentProfileComponent } from './investment-profile.component';
+import { FormInputModule } from '../base/form-input/form-input.module';
 
 describe('InvestmentProfileComponent', () => {
   let component: InvestmentProfileComponent;
@@ -8,9 +9,9 @@ describe('InvestmentProfileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InvestmentProfileComponent ]
-    })
-    .compileComponents();
+      declarations: [InvestmentProfileComponent],
+      imports: [FormInputModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

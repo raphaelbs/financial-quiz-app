@@ -11,7 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { EulaDialogComponent } from './eula-dialog/eula-dialog.component';
 import { EulaService } from './eula-dialog/eula.service';
 import { InvestmentProfileComponent } from './investment-profile/investment-profile.component';
-import { FormInputComponent } from './base/form-input/form-input.component';
+import { FormInputModule } from './base/form-input/form-input.module';
+import { EulaResolver } from './eula-dialog/eula.resolver';
 
 import {
   MatGridListModule,
@@ -35,8 +36,7 @@ const MaterialDesignModules = [
     AppComponent,
     EulaDialogComponent,
     HomeComponent,
-    InvestmentProfileComponent,
-    FormInputComponent
+    InvestmentProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -45,11 +45,13 @@ const MaterialDesignModules = [
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormInputModule,
     ...MaterialDesignModules
   ],
   entryComponents: [EulaDialogComponent],
   providers: [
     EulaService,
+    EulaResolver,
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS,
       useValue: {

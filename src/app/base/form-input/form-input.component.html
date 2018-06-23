@@ -1,3 +1,6 @@
-<p>
-  form-input works!
-</p>
+<a [routerLink]="['/']">Home</a>
+<div fxLayout fxLayoutAlign="center center">
+  <mat-card fxLayout="column" fxLayoutAlign="center center" *ngIf="form && form.type === 'form'">
+    <h2>{{form.label}}</h2>
+  </mat-card>
+</div>

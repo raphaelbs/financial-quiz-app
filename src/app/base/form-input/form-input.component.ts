@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IFormInput } from './form-input.interface';
 
 @Component({
@@ -7,9 +7,14 @@ import { IFormInput } from './form-input.interface';
   styleUrls: ['./form-input.component.scss']
 })
 export class FormInputComponent implements OnInit {
-  @Input() formInput: IFormInput;
+  @Input() public form: IFormInput;
+  @Output() formSubmit = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
+
+  submit() {
+    this.formSubmit.emit({});
+  }
 }

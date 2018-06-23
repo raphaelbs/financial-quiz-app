@@ -27,7 +27,6 @@ describe('EulaDialogComponent', () => {
   let component: EulaDialogComponent;
   let fixture: ComponentFixture<EulaDialogComponent>;
   let debugElement: DebugElement;
-  let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -53,7 +52,6 @@ describe('EulaDialogComponent', () => {
     fixture = TestBed.createComponent(EulaDialogComponent);
     component = fixture.componentInstance;
     debugElement = fixture.debugElement;
-    element = debugElement.nativeElement;
     fixture.detectChanges();
   });
 
