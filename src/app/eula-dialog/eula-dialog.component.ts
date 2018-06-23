@@ -1,11 +1,13 @@
 import { Component, OnInit, Inject, Optional } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { IEula } from './eula.interface';
+import { EulaResolver } from './eula.resolver';
 
 @Component({
   selector: 'app-eula-dialog',
   templateUrl: './eula-dialog.component.html',
-  styleUrls: ['./eula-dialog.component.scss']
+  styleUrls: ['./eula-dialog.component.scss'],
+  providers: [EulaResolver]
 })
 export class EulaDialogComponent implements OnInit {
   eulaAccepted: boolean;
