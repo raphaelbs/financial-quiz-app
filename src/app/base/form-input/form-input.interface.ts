@@ -1,7 +1,5 @@
-import { IFormInputType } from './form-input-type.interface';
-
 export interface IFormInput {
-  type: IFormInputType;
+  type: string;
   label: string;
   key?: string;
   required?: boolean;

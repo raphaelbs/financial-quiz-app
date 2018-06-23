@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IFormInput } from '../base/form-input/form-input.interface';
 
 @Component({
   selector: 'app-investment-profile',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./investment-profile.component.scss']
 })
 export class InvestmentProfileComponent implements OnInit {
-  form: any;
+  form: IFormInput;
 
   constructor() {}
 
