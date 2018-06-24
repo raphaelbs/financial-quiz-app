@@ -18,23 +18,19 @@ export class InvestmentProfileComponent implements OnInit {
           type: 'radio',
           label:
             '1 - Qual o seu comportamento em relação ao seus investimentos?',
-          key: 'q1',
           required: true,
           children: [
             {
               type: 'radio-option',
-              label: 'PRESERVAR MEU DINHEIRO SEM CORRER RISCOS',
-              key: 'o1'
+              label: 'PRESERVAR MEU DINHEIRO SEM CORRER RISCOS'
             },
             {
               type: 'radio-option',
-              label: 'GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS MODERADOS',
-              key: 'o2'
+              label: 'GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS MODERADOS'
             },
             {
               type: 'radio-option',
-              label: 'GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS AGRESSIVOS',
-              key: 'o3'
+              label: 'GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS AGRESSIVOS'
             }
           ]
         },
@@ -42,23 +38,19 @@ export class InvestmentProfileComponent implements OnInit {
           type: 'radio',
           label:
             '2 - Por quanto tempo você deseja manter os seus investimentos?',
-          key: 'q2',
           required: true,
           children: [
             {
               type: 'radio-option',
-              label: 'ATÉ 1 ANO',
-              key: 'o1'
+              label: 'ATÉ 1 ANO'
             },
             {
               type: 'radio-option',
-              label: 'DE 1 A 3 ANOS',
-              key: 'o2'
+              label: 'DE 1 A 3 ANOS'
             },
             {
               type: 'radio-option',
-              label: 'DE 3 A 5 ANOS',
-              key: 'o3'
+              label: 'DE 3 A 5 ANOS'
             }
           ]
         },
@@ -66,23 +58,19 @@ export class InvestmentProfileComponent implements OnInit {
           type: 'radio',
           label:
             '3 - Quantos % desses investimentos você pode precisar em um ano?',
-          key: 'q3',
           required: true,
           children: [
             {
               type: 'radio-option',
-              label: 'ACIMA DE 75%',
-              key: 'o1'
+              label: 'ACIMA DE 75%'
             },
             {
               type: 'radio-option',
-              label: 'DE 26% A 74%',
-              key: 'o2'
+              label: 'DE 26% A 74%'
             },
             {
               type: 'radio-option',
-              label: 'ATÉ 25%',
-              key: 'o3'
+              label: 'ATÉ 25%'
             }
           ]
         },
@@ -94,112 +82,92 @@ export class InvestmentProfileComponent implements OnInit {
             {
               type: 'select',
               label: 'TÍTULOS DE RENDA FIXA OU TESOURO DIRETO',
-              key: 'sg1',
               required: true,
               children: [
                 {
                   type: 'select-option',
-                  label: 'Nunca operei',
-                  key: 'o1'
+                  label: 'Nunca operei'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero pouco e não tenho familiaridade',
-                  key: 'o2'
+                  label: 'Opero pouco e não tenho familiaridade'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero eventualmente e conheço os riscos associados',
-                  key: 'o3'
+                  label: 'Opero eventualmente e conheço os riscos associados'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero frequentemente e conheço os riscos associados',
-                  key: 'o4'
+                  label: 'Opero frequentemente e conheço os riscos associados'
                 }
               ]
             },
             {
               type: 'select',
               label: 'FUNDOS DE INVESTIMENTO',
-              key: 'sg2',
               required: true,
               children: [
                 {
                   type: 'select-option',
-                  label: 'Nunca operei',
-                  key: 'o1'
+                  label: 'Nunca operei'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero pouco e não tenho familiaridade',
-                  key: 'o2'
+                  label: 'Opero pouco e não tenho familiaridade'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero eventualmente e conheço os riscos associados',
-                  key: 'o3'
+                  label: 'Opero eventualmente e conheço os riscos associados'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero frequentemente e conheço os riscos associados',
-                  key: 'o4'
+                  label: 'Opero frequentemente e conheço os riscos associados'
                 }
               ]
             },
             {
               type: 'select',
               label: 'AÇÕES A VISTA',
-              key: 'sg3',
               required: true,
               children: [
                 {
                   type: 'select-option',
-                  label: 'Nunca operei',
-                  key: 'o1'
+                  label: 'Nunca operei'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero pouco e não tenho familiaridade',
-                  key: 'o2'
+                  label: 'Opero pouco e não tenho familiaridade'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero eventualmente e conheço os riscos associados',
-                  key: 'o3'
+                  label: 'Opero eventualmente e conheço os riscos associados'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero frequentemente e conheço os riscos associados',
-                  key: 'o4'
+                  label: 'Opero frequentemente e conheço os riscos associados'
                 }
               ]
             },
             {
               type: 'select',
               label: 'ALUGUEL DE AÇÕES, TERMOS, OPÇÕES E FUTUROS',
-              key: 'sg4',
               required: true,
               children: [
                 {
                   type: 'select-option',
-                  label: 'Nunca operei',
-                  key: 'o1'
+                  label: 'Nunca operei'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero pouco e não tenho familiaridade',
-                  key: 'o2'
+                  label: 'Opero pouco e não tenho familiaridade'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero eventualmente e conheço os riscos associados',
-                  key: 'o3'
+                  label: 'Opero eventualmente e conheço os riscos associados'
                 },
                 {
                   type: 'select-option',
-                  label: 'Opero frequentemente e conheço os riscos associados',
-                  key: 'o4'
+                  label: 'Opero frequentemente e conheço os riscos associados'
                 }
               ]
             }
@@ -212,4 +180,6 @@ export class InvestmentProfileComponent implements OnInit {
   ngOnInit() {}
 
   formSubmit() {}
+
+  back() {}
 }
