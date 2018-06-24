@@ -177,8 +177,8 @@ export class InvestmentProfileComponent implements OnInit {
             },
             {
               type: 'select',
-              label: 'ALUGUEL DE AÇÕES, TESMOE, OPÇÕES E FUTUROS',
-              key: 'sg3',
+              label: 'ALUGUEL DE AÇÕES, TERMOS, OPÇÕES E FUTUROS',
+              key: 'sg4',
               required: true,
               children: [
                 {
