@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IFormInput } from '../base/form-input/form-input.interface';
+import { IFormOutput } from '../base/form-input/form-output.interface';
 
 @Component({
   selector: 'app-investment-profile',
@@ -179,7 +180,9 @@ export class InvestmentProfileComponent implements OnInit {
 
   ngOnInit() {}
 
-  formSubmit() {}
+  formSubmit(formOutput: IFormOutput) {
+    console.log(formOutput);
+  }
 
   back() {}
 }

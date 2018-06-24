@@ -1,7 +1,7 @@
 <a [routerLink]="['/']">Home</a>
 <div fxLayout="column" fxLayoutAlign="center center">
   <mat-card>
-    <app-form-input [form]="form"></app-form-input>
+    <app-form-input [form]="form" (formChanged)="formSubmit($event);"></app-form-input>
 
     <div fxFlex fxLayout>
       <div fxFlex></div>

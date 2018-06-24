@@ -9,14 +9,14 @@ import { FilterFormOutput, IFormOutput } from './form-output.interface';
 })
 export class FormInputComponent implements OnInit {
   @Input() public form: IFormInput;
-  @Output() formSubmit = new EventEmitter();
+  @Output() formChanged = new EventEmitter<IFormOutput>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  submit() {
-    this.formSubmit.emit({});
+  updateFormOutput() {
+    this.formChanged.emit(this.filterFormOutput(this.form));
   }
 
   filterRadioOption(form: IFormInput) {
