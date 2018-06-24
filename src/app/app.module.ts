@@ -24,6 +24,7 @@ import { FormInputModule } from './base/form-input/form-input.module';
 import { EulaResolver } from './eula-dialog/eula.resolver';
 import { SummaryComponent } from './summary/summary.component';
 import { SummaryService } from './summary/summary.service';
+import { InvestmentProfileService } from './investment-profile/investment-profile.service';
 
 const MaterialDesignModules = [
   MatGridListModule,
@@ -56,6 +57,7 @@ const MaterialDesignModules = [
     EulaService,
     EulaResolver,
     SummaryService,
+    InvestmentProfileService,
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS,
       useValue: {

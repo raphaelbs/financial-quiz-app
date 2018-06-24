@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IFormInput } from '../base/form-input/form-input.interface';
 import { IFormOutput } from '../base/form-input/form-output.interface';
+import { Router } from '@angular/router';
+import { InvestmentProfileService } from './investment-profile.service';
 
 @Component({
   selector: 'app-investment-profile',
@@ -9,8 +11,13 @@ import { IFormOutput } from '../base/form-input/form-output.interface';
 })
 export class InvestmentProfileComponent implements OnInit {
   form: IFormInput;
+  formOutput: IFormOutput;
+  error: string;
 
-  constructor() {
+  constructor(
+    private router: Router,
+    private investmentProfileService: InvestmentProfileService
+  ) {
     this.form = {
       type: 'form',
       label: 'PERFIL DO INVESTIDOR - QUESTIONÁRIO',
@@ -180,8 +187,24 @@ export class InvestmentProfileComponent implements OnInit {
 
   ngOnInit() {}
 
-  formSubmit(formOutput: IFormOutput) {
-    console.log(formOutput);
+  formChanged(formOutput: IFormOutput) {
+    this.formOutput = formOutput;
+  }
+
+  formSubmit() {
+    this.error = undefined;
+    this.investmentProfileService.saveProfile(this.formOutput).subscribe(
+      () => {
+        this.router.navigate(['/sumario'], {
+          queryParams: {
+            userId: '111111111111111111111111'
+          }
+        });
+      },
+      e => {
+        this.error = e;
+      }
+    );
   }
 
   back() {}
