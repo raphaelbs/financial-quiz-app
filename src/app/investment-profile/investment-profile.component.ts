@@ -19,7 +19,6 @@ export class InvestmentProfileComponent implements OnInit {
     private route: ActivatedRoute,
     private investmentProfileService: InvestmentProfileService
   ) {
-    // 5b2fe50823dfe10758431c59
     this.form = this.route.snapshot.data['form'];
   }
 
@@ -45,5 +44,7 @@ export class InvestmentProfileComponent implements OnInit {
     );
   }
 
-  back() {}
+  back() {
+    this.router.navigate(['/home']);
+  }
 }
