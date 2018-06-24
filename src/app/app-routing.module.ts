@@ -6,6 +6,7 @@ import { EulaResolver } from './eula-dialog/eula.resolver';
 import { InvestmentProfileComponent } from './investment-profile/investment-profile.component';
 import { SummaryComponent } from './summary/summary.component';
 import { SummaryResolver } from './summary/summary.resolver';
+import { InvestmentProfileResolver } from './investment-profile/investment-profile.resolver';
 
 export const routes: Routes = [
   {
@@ -14,7 +15,8 @@ export const routes: Routes = [
     children: [
       {
         path: 'perfil',
-        component: InvestmentProfileComponent
+        component: InvestmentProfileComponent,
+        resolve: { form: InvestmentProfileResolver }
       },
       {
         path: 'sumario',

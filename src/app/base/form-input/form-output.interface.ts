@@ -1,4 +1,5 @@
 export interface IFormOutput {
+  _id?: string;
   question: string;
   anwser: any;
   children?: IFormOutput[];

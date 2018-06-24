@@ -25,6 +25,8 @@ import { EulaResolver } from './eula-dialog/eula.resolver';
 import { SummaryComponent } from './summary/summary.component';
 import { SummaryService } from './summary/summary.service';
 import { InvestmentProfileService } from './investment-profile/investment-profile.service';
+import { SummaryResolver } from './summary/summary.resolver';
+import { InvestmentProfileResolver } from './investment-profile/investment-profile.resolver';
 
 const MaterialDesignModules = [
   MatGridListModule,
@@ -57,7 +59,9 @@ const MaterialDesignModules = [
     EulaService,
     EulaResolver,
     SummaryService,
+    SummaryResolver,
     InvestmentProfileService,
+    InvestmentProfileResolver,
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS,
       useValue: {
