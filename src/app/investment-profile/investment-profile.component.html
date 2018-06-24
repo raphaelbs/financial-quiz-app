@@ -1,4 +1,16 @@
 <a [routerLink]="['/']">Home</a>
-<div fxLayout fxLayoutAlign="center center">
-  <app-form-input [form]="form" (form-submit)="formSubmit($event)"></app-form-input>
+<div fxLayout="column" fxLayoutAlign="center center">
+  <mat-card>
+    <app-form-input [form]="form"></app-form-input>
+
+    <div fxFlex fxLayout>
+      <div fxFlex></div>
+      <div fxFlex="20">
+        <button mat-raised-button (click)="back()">VOLTAR</button>
+      </div>
+      <div fxFlex="20">
+        <button mat-raised-button color="primary" (click)="formSubmit(true)">SALVAR</button>
+      </div>
+    </div>
+  </mat-card>
 </div>
