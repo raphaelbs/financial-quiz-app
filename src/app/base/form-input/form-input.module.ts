@@ -4,7 +4,7 @@ import { FormInputComponent } from './form-input.component';
 import { MatRadioModule, MatSelectModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../../app-routing.module';
-import { BasePipePipe } from './base-pipe.pipe';
+import { BasePipe } from './base-pipe.pipe';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     FlexLayoutModule,
     AppRoutingModule
   ],
-  declarations: [FormInputComponent, BasePipePipe],
+  declarations: [FormInputComponent, BasePipe],
   exports: [FormInputComponent]
 })
 export class FormInputModule {}

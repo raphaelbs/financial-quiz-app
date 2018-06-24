@@ -1,8 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormInputComponent } from './form-input.component';
-import { MatCardModule } from '@angular/material';
+import {
+  MatCardModule,
+  MatRadioModule,
+  MatSelectModule
+} from '@angular/material';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BasePipe } from './base-pipe.pipe';
 
 describe('FormInputComponent', () => {
   let component: FormInputComponent;
@@ -10,8 +16,8 @@ describe('FormInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FormInputComponent],
-      imports: [MatCardModule],
+      declarations: [FormInputComponent, BasePipe],
+      imports: [MatCardModule, MatRadioModule, MatSelectModule, FormsModule],
       providers: []
     }).compileComponents();
   }));
