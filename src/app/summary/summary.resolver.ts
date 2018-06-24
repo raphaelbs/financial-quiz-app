@@ -17,6 +17,6 @@ export class SummaryResolver implements Resolve<IFormOutput> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<IFormOutput> {
-    return this.summaryService.findSummary(route.paramMap.get('userId'));
+    return this.summaryService.findSummary(route.queryParams['userId']);
   }
 }

@@ -1,14 +1,14 @@
 export interface IFormOutput {
   _id?: string;
   question: string;
-  anwser: any;
+  answer: any;
   children?: IFormOutput[];
 }
 
 export function FilterFormOutput(formOutput: IFormOutput): boolean {
   return !!(
     formOutput.question &&
-    (formOutput.anwser ||
+    (formOutput.answer ||
       (formOutput.children &&
         formOutput.children.filter(FilterFormOutput).length > 0))
   );

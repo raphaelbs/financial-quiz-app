@@ -40,7 +40,7 @@ export class FormInputComponent implements OnInit {
     }
     return {
       question: form.label,
-      anwser: form.value,
+      answer: form.value,
       children: children && children.length > 0 ? children : undefined
     } as IFormOutput;
   }

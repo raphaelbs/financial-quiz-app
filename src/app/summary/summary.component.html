@@ -1,4 +1,15 @@
 <a [routerLink]="['/']">Home</a>
-<p>
-  summary works!
-</p>
+<div fxLayout="column" fxLayoutAlign="center center">
+  <mat-card>
+    <h2>Cadastro realizado com sucesso!</h2>
+  </mat-card>
+  <br>
+  <mat-card *ngIf="formOutputs">
+    <h2>Sumário das suas respostas</h2>
+    <div *ngFor="let form of formOutputs">
+      <h4 [innerHTML]="form.question"></h4>
+      <span [innerHTML]="form.answer"></span>
+      <br *ngIf="form.answer">
+    </div>
+  </mat-card>
+</div>
