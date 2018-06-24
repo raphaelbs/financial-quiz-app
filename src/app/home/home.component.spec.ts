@@ -9,7 +9,8 @@ import { routes } from '../app-routing.module';
 import { AppComponent } from '../app.component';
 import { InvestmentProfileComponent } from '../investment-profile/investment-profile.component';
 import { FormInputModule } from '../base/form-input/form-input.module';
-export class EulaDialogMock {
+import { SummaryComponent } from '../summary/summary.component';
+class EulaDialogMock {
   open() {
     return {
       afterClosed: () => of([false])
@@ -23,7 +24,12 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, InvestmentProfileComponent, HomeComponent],
+      declarations: [
+        AppComponent,
+        InvestmentProfileComponent,
+        HomeComponent,
+        SummaryComponent
+      ],
       imports: [
         MatCardModule,
         FormInputModule,
