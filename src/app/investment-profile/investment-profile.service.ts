@@ -3,7 +3,7 @@ import { IFormOutput } from '../base/form-input/form-output.interface';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
-import { IFormInput } from '../../../../financial-quiz-api/src/form-input/form-input.interface';
+import { IFormInput } from '../base/form-input/form-input.interface';
 
 @Injectable()
 export class InvestmentProfileService {
