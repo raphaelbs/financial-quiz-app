@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IFormInput } from './form-input.interface';
+import { FilterFormOutput, IFormOutput } from './form-output.interface';
 
 @Component({
   selector: 'app-form-input',
@@ -30,23 +31,17 @@ export class FormInputComponent implements OnInit {
     return form.type === 'select-option';
   }
 
-  filterKeyValueTree(form: IFormInput): KeyValueTree {
+  filterFormOutput(form: IFormInput): IFormOutput {
     let children;
     if (form.children) {
       children = form.children
-        .map(this.filterKeyValueTree, this)
-        .filter(f => !!(f.key && f.value));
+        .map(this.filterFormOutput, this)
+        .filter(FilterFormOutput);
     }
     return {
-      key: form.key,
-      value: form.value,
+      question: form.label,
+      anwser: form.value,
       children: children && children.length > 0 ? children : undefined
-    } as KeyValueTree;
+    } as IFormOutput;
   }
-}
-
-interface KeyValueTree {
-  key: string;
-  value: any;
-  children?: KeyValueTree[];
 }
