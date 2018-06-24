@@ -1,9 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { HomeComponent } from './home.component';
 import { MatCardModule, MatDialog } from '@angular/material';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
+import { routes } from '../app-routing.module';
+import { AppComponent } from '../app.component';
+import { InvestmentProfileComponent } from '../investment-profile/investment-profile.component';
+import { FormInputModule } from '../base/form-input/form-input.module';
 export class EulaDialogMock {
   open() {
     return {
@@ -18,8 +23,12 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent],
-      imports: [MatCardModule],
+      declarations: [AppComponent, InvestmentProfileComponent, HomeComponent],
+      imports: [
+        MatCardModule,
+        FormInputModule,
+        RouterTestingModule.withRoutes(routes)
+      ],
       providers: [
         { provide: MatDialog, useClass: EulaDialogMock },
         {

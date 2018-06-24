@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { EulaResolver } from './eula-dialog/eula.resolver';
 import { InvestmentProfileComponent } from './investment-profile/investment-profile.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: AppComponent,

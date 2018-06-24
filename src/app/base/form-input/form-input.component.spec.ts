@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormInputComponent } from './form-input.component';
 import { MatCardModule } from '@angular/material';
+import { Component } from '@angular/core';
 
 describe('FormInputComponent', () => {
   let component: FormInputComponent;
@@ -11,18 +12,7 @@ describe('FormInputComponent', () => {
     TestBed.configureTestingModule({
       declarations: [FormInputComponent],
       imports: [MatCardModule],
-      providers: [
-        {
-          provide: 'form',
-          useValue: {
-            type: 'form'
-          }
-        },
-        {
-          provide: 'formSubmit',
-          useValue: () => {}
-        }
-      ]
+      providers: []
     }).compileComponents();
   }));
 
@@ -36,3 +26,9 @@ describe('FormInputComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+@Component({
+  selector: `app-test-host-component`,
+  template: `<app-form-input input="test input"></app-form-input>`
+})
+class TestHostComponent {}
