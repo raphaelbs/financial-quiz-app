@@ -17,4 +17,36 @@ export class FormInputComponent implements OnInit {
   submit() {
     this.formSubmit.emit({});
   }
+
+  filterRadioOption(form: IFormInput) {
+    return form.type === 'radio-option';
+  }
+
+  filterSelect(form: IFormInput) {
+    return form.type === 'select';
+  }
+
+  filterSelectOption(form: IFormInput) {
+    return form.type === 'select-option';
+  }
+
+  filterKeyValueTree(form: IFormInput): KeyValueTree {
+    let children;
+    if (form.children) {
+      children = form.children
+        .map(this.filterKeyValueTree, this)
+        .filter(f => !!(f.key && f.value));
+    }
+    return {
+      key: form.key,
+      value: form.value,
+      children: children && children.length > 0 ? children : undefined
+    } as KeyValueTree;
+  }
+}
+
+interface KeyValueTree {
+  key: string;
+  value: any;
+  children?: KeyValueTree[];
 }
