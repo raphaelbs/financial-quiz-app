@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EulaResolver } from './eula-dialog/eula.resolver';
 import { InvestmentProfileComponent } from './investment-profile/investment-profile.component';
+import { SummaryComponent } from './summary/summary.component';
+import { SummaryResolver } from './summary/summary.resolver';
 
 export const routes: Routes = [
   {
@@ -13,6 +15,11 @@ export const routes: Routes = [
       {
         path: 'perfil',
         component: InvestmentProfileComponent
+      },
+      {
+        path: 'sumario',
+        component: SummaryComponent,
+        resolve: { formOutput: SummaryResolver }
       },
       {
         path: '**',
