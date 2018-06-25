@@ -29,8 +29,6 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe((eulaAccepted: boolean) => {
       if (eulaAccepted) {
         this.router.navigate(['/perfil']);
-      } else {
-        this.router.navigate(['/sumario']);
       }
     });
   }
