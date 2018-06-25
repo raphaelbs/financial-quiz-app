@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject, Optional } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { IEula } from './eula.interface';
+import { EulaResolver } from './eula.resolver';
 
 @Component({
   selector: 'app-eula-dialog',

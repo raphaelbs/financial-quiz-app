@@ -5,14 +5,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { EulaDialogComponent } from './eula-dialog/eula-dialog.component';
-import { EulaResolver } from './eula-dialog/eula.resolver';
-import { EulaService } from './eula-dialog/eula.service';
-import { InvestmentProfileComponent } from './investment-profile/investment-profile.component';
-
 import {
   MatGridListModule,
   MatButtonModule,
@@ -21,6 +13,20 @@ import {
   MatCheckboxModule,
   MatCardModule
 } from '@angular/material';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { EulaDialogComponent } from './eula-dialog/eula-dialog.component';
+import { EulaService } from './eula-dialog/eula.service';
+import { InvestmentProfileComponent } from './investment-profile/investment-profile.component';
+import { FormInputModule } from './base/form-input/form-input.module';
+import { EulaResolver } from './eula-dialog/eula.resolver';
+import { SummaryComponent } from './summary/summary.component';
+import { SummaryService } from './summary/summary.service';
+import { InvestmentProfileService } from './investment-profile/investment-profile.service';
+import { SummaryResolver } from './summary/summary.resolver';
+import { InvestmentProfileResolver } from './investment-profile/investment-profile.resolver';
 
 const MaterialDesignModules = [
   MatGridListModule,
@@ -35,7 +41,8 @@ const MaterialDesignModules = [
     AppComponent,
     EulaDialogComponent,
     HomeComponent,
-    InvestmentProfileComponent
+    InvestmentProfileComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -44,12 +51,17 @@ const MaterialDesignModules = [
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormInputModule,
     ...MaterialDesignModules
   ],
   entryComponents: [EulaDialogComponent],
   providers: [
     EulaService,
     EulaResolver,
+    SummaryService,
+    SummaryResolver,
+    InvestmentProfileService,
+    InvestmentProfileResolver,
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS,
       useValue: {
