@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EulaDialogComponent } from './eula-dialog.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
+import { of } from 'rxjs';
+import { DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
 import {
   MatDialogModule,
   MatButtonModule,
@@ -8,14 +13,8 @@ import {
   MatDialogRef,
   MAT_DIALOG_DATA
 } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
-import { of } from 'rxjs';
-import { DebugElement } from '@angular/core';
-import { By } from '@angular/platform-browser';
-import { element } from 'protractor';
 
-export class EulaDialogMock {
+class EulaDialogMock {
   close() {
     return {
       afterClosed: () => of([false])
@@ -27,7 +26,6 @@ describe('EulaDialogComponent', () => {
   let component: EulaDialogComponent;
   let fixture: ComponentFixture<EulaDialogComponent>;
   let debugElement: DebugElement;
-  let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -53,7 +51,6 @@ describe('EulaDialogComponent', () => {
     fixture = TestBed.createComponent(EulaDialogComponent);
     component = fixture.componentInstance;
     debugElement = fixture.debugElement;
-    element = debugElement.nativeElement;
     fixture.detectChanges();
   });
 
