@@ -1,10 +1,10 @@
 <div mat-dialog-title fxLayoutAlign="space-between center">
-  <h2>{{ (eula && eula.label) || 'Termo não carregado' }}</h2>
+  <h2>{{ eula.label }}</h2>
   <button mat-icon-button [mat-dialog-close]="false">
     <i class="mdi mdi-close"></i>
   </button>
 </div>
-<mat-dialog-content [innerHTML]="(eula && eula.eula) || 'Termo não carregado'"></mat-dialog-content>
+<mat-dialog-content [innerHTML]="eula.eula"></mat-dialog-content>
 <hr>
 <div fxLayout="column" fxLayoutAlign="center center">
   <p>
